@@ -1882,4 +1882,160 @@ class TraceSeis_ModelValidator:
         if not selected_indices:
             messagebox.showwarning("No Selection", "Please select one or more models to analyze.")
             return
+    
+    def export_pdf_report(self):
+        """Export professional PDF report of analysis results."""
+        try:
+            if not hasattr(self, 'current_metrics') or not self.current_metrics:
+                messagebox.showwarning("No Data", "Please analyze models first before exporting PDF report.")
+                return
+            
+            # Ask user for save location
+            output_path = filedialog.asksaveasfilename(
+                title="Save PDF Report",
+                defaultextension=".pdf",
+                filetypes=[
+                    ("PDF files", "*.pdf"),
+                    ("All files", "*.*")
+                ]
+            )
+            
+            if not output_path:
+                return  # User cancelled
+            
+            self.status_var.set("Creating PDF report...")
+            self.progress_var.set(10)
+            self.root.update()
+            
+            # Prepare metrics list
+            metrics_list = list(self.current_metrics.values())
+            
+            self.progress_var.set(30)
+            self.root.update()
+            
+            # Prepare figures dictionary if available
+            figures_dict = getattr(self, 'current_figures', {})
+            
+            self.progress_var.set(50)
+            self.root.update()
+            
+            # Generate PDF report using the existing PDFReportGenerator
+            success = self.pdf_generator.create_comprehensive_report(
+                metrics_list, figures_dict, output_path
+            )
+            
+            self.progress_var.set(90)
+            self.root.update()
+            
+            if success:
+                self.status_var.set(f"PDF report saved: {output_path}")
+                self.progress_var.set(100)
+                messagebox.showinfo("Success", f"PDF report created successfully!\n\nSaved to: {output_path}")
+                self.logger.info(f"PDF report exported successfully: {output_path}")
+            else:
+                self.status_var.set("PDF export failed")
+                messagebox.showerror("Error", f"Failed to create PDF report.\n\nPlease check the log file for details.")
+                self.logger.error("PDF report export failed")
+            
+            # Reset progress
+            self.progress_var.set(0)
+            
+        except Exception as e:
+            self.logger.error(f"PDF export error: {e}")
+            if DEBUG_MODE:
+                self.logger.debug(traceback.format_exc())
+            self.status_var.set("PDF export error")
+            self.progress_var.set(0)
+            messagebox.showerror("Error", f"Failed to export PDF report: {str(e)}")
+    
+    def export_results(self):
+        """Export analysis results to text and CSV files."""
+        try:
+            if not hasattr(self, 'current_metrics') or not self.current_metrics:
+                messagebox.showwarning("No Data", "Please analyze models first before exporting results.")
+                return
+            
+            # Ask user for save location
+            output_path = filedialog.asksaveasfilename(
+                title="Save Results",
+                defaultextension=".txt",
+                filetypes=[
+                    ("Text files", "*.txt"),
+                    ("CSV files", "*.csv"),
+                    ("All files", "*.*")
+                ]
+            )
+            
+            if not output_path:
+                return  # User cancelled
+            
+            self.status_var.set("Exporting results...")
+            
+            # Determine file format from extension
+            file_ext = os.path.splitext(output_path)[1].lower()
+            
+            if file_ext == '.csv':
+                self._export_csv_results(output_path)
+            else:
+                self._export_text_results(output_path)
+            
+            self.status_var.set(f"Results exported: {output_path}")
+            messagebox.showinfo("Success", f"Results exported successfully!\n\nSaved to: {output_path}")
+            self.logger.info(f"Results exported: {output_path}")
+            
+        except Exception as e:
+            self.logger.error(f"Export error: {e}")
+            if DEBUG_MODE:
+                self.logger.debug(traceback.format_exc())
+            self.status_var.set("Export error")
+            messagebox.showerror("Error", f"Failed to export results: {str(e)}")
+    
+    def _export_text_results(self, output_path: str):
+        """Export results as formatted text file."""
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write("TraceSeis RADAR - Results Analysis and Data Accuracy Reporter\n")
+            f.write("=" * 70 + "\n")
+            f.write(f"Analysis Results - {len(self.current_metrics)} models\n")
+            f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+            
+            for model_name, metrics in self.current_metrics.items():
+                f.write(f"\nModel: {model_name}\n")
+                f.write("-" * 50 + "\n")
+                f.write(f"Global Fit: {metrics.global_fit:.2f}%\n")
+                f.write(f"Accuracy: {metrics.accuracy:.2f}%\n")
+                f.write(f"Cramer's V: {metrics.cramers_v:.3f}\n")
+                f.write(f"Percent Undefined: {metrics.percent_undefined:.1f}%\n")
+                f.write(f"Total Samples: {metrics.total_samples}\n")
+                
+                f.write("\nPer-Class Metrics:\n")
+                for class_name in metrics.precision.keys():
+                    f.write(f"  {class_name}:\n")
+                    f.write(f"    Precision: {metrics.precision[class_name]:.3f}\n")
+                    f.write(f"    Recall: {metrics.recall[class_name]:.3f}\n")
+                    f.write(f"    F1-Score: {metrics.f1_score[class_name]:.3f}\n")
+                    f.write(f"    Distribution: {metrics.classification_distribution[class_name]:.1f}%\n")
+                f.write("\n")
+    
+    def _export_csv_results(self, output_path: str):
+        """Export results as CSV file."""
+        import csv
         
+        with open(output_path, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            
+            # Header
+            writer.writerow([
+                'Model', 'Global_Fit_%', 'Accuracy_%', 'Cramers_V', 
+                'Percent_Undefined_%', 'Total_Samples'
+            ])
+            
+            # Data rows
+            for model_name, metrics in self.current_metrics.items():
+                writer.writerow([
+                    model_name,
+                    f"{metrics.global_fit:.2f}",
+                    f"{metrics.accuracy:.2f}",
+                    f"{metrics.cramers_v:.3f}",
+                    f"{metrics.percent_undefined:.1f}",
+                    metrics.total_samples
+                ])
