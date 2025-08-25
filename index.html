@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeophysTech Solutions - Advanced Geophysics Software</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-globe"></i>
+                <span>GeophysTech</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#programs" class="nav-link">Programs</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#demo" class="nav-link cta-button">Request Demo</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Revolutionizing
+                    <span class="gradient-text">Geophysics</span>
+                    with Next-Gen Software
+                </h1>
+                <p class="hero-subtitle">
+                    Discover our cutting-edge geophysics programs that combine advanced algorithms, 
+                    real-time processing, and intuitive interfaces to transform how you analyze Earth's subsurface.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#programs" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Explore Programs
+                    </a>
+                    <a href="#demo" class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Accuracy Rate</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Real-time Analysis</h3>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="heroChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Flagship Programs</h2>
+                <p class="section-subtitle">
+                    Two revolutionary software solutions designed to push the boundaries of geophysical exploration
+                </p>
+            </div>
+            
+            <div class="programs-grid">
+                <!-- Program 1: SeismoMax Pro -->
+                <div class="program-card" data-tilt>
+                    <div class="program-header">
+                        <div class="program-icon">
+                            <i class="fas fa-wave-square"></i>
+                        </div>
+                        <div class="program-badge">Seismic Analysis</div>
+                    </div>
+                    <h3 class="program-title">SeismoMax Pro</h3>
+                    <p class="program-description">
+                        Advanced seismic data processing and interpretation software with AI-powered 
+                        signal enhancement and automated fault detection capabilities.
+                    </p>
+                    
+                    <div class="program-features">
+                        <div class="feature">
+                            <i class="fas fa-brain"></i>
+                            <span>AI-Powered Processing</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Real-time Analysis</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-layer-group"></i>
+                            <span>3D Visualization</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud Integration</span>
+                        </div>
+                    </div>
+                    
+                    <div class="program-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">10x</span>
+                            <span class="stat-desc">Faster Processing</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">95%</span>
+                            <span class="stat-desc">Accuracy</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#demo" class="program-cta">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Program 2: GravityVision Elite -->
+                <div class="program-card" data-tilt>
+                    <div class="program-header">
+                        <div class="program-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="program-badge">Gravity Modeling</div>
+                    </div>
+                    <h3 class="program-title">GravityVision Elite</h3>
+                    <p class="program-description">
+                        Comprehensive gravity and magnetic field modeling suite with advanced inversion 
+                        algorithms and interactive 4D subsurface modeling capabilities.
+                    </p>
+                    
+                    <div class="program-features">
+                        <div class="feature">
+                            <i class="fas fa-magic"></i>
+                            <span>Advanced Inversion</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-cube"></i>
+                            <span>4D Modeling</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-satellite"></i>
+                            <span>Satellite Integration</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-microscope"></i>
+                            <span>Micro-gravity Analysis</span>
+                        </div>
+                    </div>
+                    
+                    <div class="program-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">50%</span>
+                            <span class="stat-desc">Better Resolution</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">24/7</span>
+                            <span class="stat-desc">Processing</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#demo" class="program-cta">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose GeophysTech?</h2>
+                <p class="section-subtitle">
+                    Industry-leading technology meets decades of geophysical expertise
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightning-bolt"></i>
+                    </div>
+                    <h3>Ultra-Fast Processing</h3>
+                    <p>GPU-accelerated algorithms deliver results 10x faster than traditional methods</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Enterprise Security</h3>
+                    <p>Military-grade encryption and secure cloud infrastructure protect your data</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaborative Workflows</h3>
+                    <p>Real-time collaboration tools for distributed teams and project management</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Cross-Platform</h3>
+                    <p>Native support for Windows, macOS, Linux, and mobile field applications</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Expert Support</h3>
+                    <p>24/7 technical support from certified geophysicists and software engineers</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>Unlimited Scalability</h3>
+                    <p>From single workstations to enterprise clusters, scale as your needs grow</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Ready to Transform Your Geophysics Workflow?</h2>
+                    <p>
+                        Join leading geophysicists worldwide who trust GeophysTech for their most 
+                        critical projects. Schedule a personalized demo at the convention.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Convention Booth</h4>
+                                <p>Booth #247, Main Exhibition Hall</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <h4>Demo Schedule</h4>
+                                <p>Daily at 10 AM, 2 PM, and 4 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>demo@geophystech.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="demo-form">
+                    <h3>Request Private Demo</h3>
+                    <form id="demoForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Full Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="company" name="company" placeholder="Company/Organization" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="program" name="program" required>
+                                <option value="">Select Program of Interest</option>
+                                <option value="seismomax">SeismoMax Pro</option>
+                                <option value="gravityvision">GravityVision Elite</option>
+                                <option value="both">Both Programs</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Tell us about your project requirements" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary full-width">
+                            <i class="fas fa-paper-plane"></i>
+                            Schedule Demo
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-globe"></i>
+                        <span>GeophysTech</span>
+                    </div>
+                    <p>Advancing geophysical exploration through innovative software solutions.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#programs">SeismoMax Pro</a></li>
+                        <li><a href="#programs">GravityVision Elite</a></li>
+                        <li><a href="#features">Features</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#support">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 GeophysTech Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
