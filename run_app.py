@@ -30,7 +30,7 @@ def check_dependencies():
 
 def main():
     """Main function to launch the application."""
-    print("🚀 Starting CONFIRM Data Converter...")
+    print("Starting CONFIRM Data Converter...")
     
     # Check and install dependencies
     check_dependencies()
@@ -44,9 +44,9 @@ def main():
             '--server.address', 'localhost'
         ])
     except KeyboardInterrupt:
-        print("\n👋 Application stopped by user")
+        print("\nApplication stopped by user")
     except Exception as e:
-        print(f"❌ Error launching application: {e}")
+        print(f"Error launching application: {e}")
 
 if __name__ == "__main__":
     main()

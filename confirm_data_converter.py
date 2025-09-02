@@ -21,7 +21,6 @@ warnings.filterwarnings('ignore')
 # Page configuration
 st.set_page_config(
     page_title="CONFIRM Data Converter",
-    page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -136,7 +135,7 @@ class DataImportModule:
             st.warning("No data to preview")
             return
         
-        st.subheader("📋 Data Preview")
+        st.subheader("Data Preview")
         
         # Show basic info
         col1, col2, col3, col4 = st.columns(4)
@@ -154,7 +153,7 @@ class DataImportModule:
         st.dataframe(df.head(rows), use_container_width=True)
         
         # Show data types
-        st.subheader("📊 Data Types")
+        st.subheader("Data Types")
         dtype_df = pd.DataFrame({
             'Column': df.columns,
             'Data Type': df.dtypes,
@@ -220,7 +219,7 @@ class VariableSelectionInterface:
     
     def display_variable_analysis(self, df: pd.DataFrame) -> None:
         """Display detailed analysis of each variable."""
-        st.subheader("🔍 Variable Analysis")
+        st.subheader("Variable Analysis")
         
         for col, info in self.schema_info.items():
             with st.expander(f"**{col}** ({info['suggested_type']})"):
@@ -245,7 +244,7 @@ class VariableSelectionInterface:
     
     def select_variables(self, df: pd.DataFrame) -> Tuple[str, str]:
         """Interface for selecting row and column variables."""
-        st.subheader("🎯 Variable Selection")
+        st.subheader("Variable Selection")
         
         # Get categorical columns
         categorical_cols = [col for col, info in self.schema_info.items() 
@@ -264,7 +263,7 @@ class VariableSelectionInterface:
             )
             
             if self.row_var and self.row_var in continuous_cols:
-                st.warning("⚠️ Continuous variable selected. Consider categorization.")
+                st.warning("Continuous variable selected. Consider categorization.")
         
         with col2:
             st.write("**Column Variable (Y-axis):**")
@@ -275,11 +274,11 @@ class VariableSelectionInterface:
             )
             
             if self.col_var and self.col_var in continuous_cols:
-                st.warning("⚠️ Continuous variable selected. Consider categorization.")
+                st.warning("Continuous variable selected. Consider categorization.")
         
         # Recommendations
         if categorical_cols:
-            st.info(f"💡 **Recommended categorical variables:** {', '.join(categorical_cols[:5])}")
+            st.info(f"**Recommended categorical variables:** {', '.join(categorical_cols[:5])}")
         
         return self.row_var, self.col_var
     
@@ -361,38 +360,38 @@ class ContingencyTableGenerator:
         if contingency_table is None:
             return
         
-        st.subheader("📊 Contingency Table")
+        st.subheader("Contingency Table")
         
         # Display the table
         st.dataframe(contingency_table, use_container_width=True)
         
         # Display validation results
         if self.validation_results:
-            st.subheader("✅ Validation Results")
+            st.subheader("Validation Results")
             
             if self.validation_results['is_valid']:
-                st.success("✅ Table is valid for CONFIRM analysis")
+                st.success("Table is valid for CONFIRM analysis")
             else:
-                st.error("❌ Table has validation errors")
+                st.error("Table has validation errors")
             
             if self.validation_results['warnings']:
-                st.warning("⚠️ Warnings:")
+                st.warning("Warnings:")
                 for warning in self.validation_results['warnings']:
                     st.write(f"  • {warning}")
             
             if self.validation_results['errors']:
-                st.error("❌ Errors:")
+                st.error("Errors:")
                 for error in self.validation_results['errors']:
                     st.write(f"  • {error}")
             
             if self.validation_results['recommendations']:
-                st.info("💡 Recommendations:")
+                st.info("Recommendations:")
                 for rec in self.validation_results['recommendations']:
                     st.write(f"  • {rec}")
 
 def main():
     """Main application function."""
-    st.title("📊 CONFIRM Data Converter")
+    st.title("CONFIRM Data Converter")
     st.markdown("Transform raw client data into properly formatted contingency tables for statistical validation")
     
     # Initialize session state
@@ -403,7 +402,7 @@ def main():
     
     # Sidebar for data import
     with st.sidebar:
-        st.header("📁 Data Import")
+        st.header("Data Import")
         
         import_type = st.radio(
             "Select import method:",
@@ -434,7 +433,7 @@ def main():
                 if df is not None:
                     st.session_state.data = df
                     st.session_state.schema_info = data_importer.detect_schema(df)
-                    st.success("✅ Data imported successfully!")
+                    st.success("Data imported successfully!")
         
         else:  # Database Connection
             st.subheader("Database Connection")
@@ -478,7 +477,7 @@ def main():
                     if df is not None:
                         st.session_state.data = df
                         st.session_state.schema_info = data_importer.detect_schema(df)
-                        st.success("✅ Database connected successfully!")
+                        st.success("Database connected successfully!")
     
     # Main content area
     if st.session_state.data is not None:
@@ -509,7 +508,7 @@ def main():
                 table_generator.display_table(contingency_table)
                 
                 # Download option
-                st.subheader("💾 Download Results")
+                st.subheader("Download Results")
                 
                 # Convert to CSV for download
                 csv = contingency_table.to_csv()
@@ -545,10 +544,10 @@ def main():
                 )
     
     else:
-        st.info("👈 Please import data using the sidebar to get started")
+        st.info("Please import data using the sidebar to get started")
         
         # Show example
-        st.subheader("📋 Example Usage")
+        st.subheader("Example Usage")
         st.markdown("""
         1. **Import Data**: Use the sidebar to upload a file or connect to a database
         2. **Review Schema**: The system will automatically detect data types and suggest categorical variables

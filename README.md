@@ -4,21 +4,21 @@ A comprehensive tool to transform raw client data into properly formatted contin
 
 ## Features
 
-### 🔧 Data Import Module
+### Data Import Module
 - **Multi-format Support**: Excel (.xlsx), CSV (.csv), JSON (.json)
 - **Database Connections**: PostgreSQL, MySQL, SQLite, SQL Server
 - **Data Preview**: Interactive preview of first 100 rows
 - **Schema Detection**: Automatic data type identification and categorical field detection
 - **Custom Queries**: Pre-filter data with custom SQL queries for database connections
 
-### 🎯 Variable Selection Interface
+### Variable Selection Interface
 - **Smart Column Selection**: Intuitive row and column variable selection
 - **Data Type Analysis**: Automatic detection of continuous vs categorical variables
 - **Field Statistics**: Comprehensive statistics including unique counts, null values, min/max
 - **Recommendation Engine**: AI-powered suggestions based on cardinality and distribution
 - **Validation Warnings**: Alerts for continuous variables that may need categorization
 
-### 📊 Contingency Table Generation
+### Contingency Table Generation
 - **Automatic Table Creation**: Generate contingency tables from selected variables
 - **CONFIRM Validation**: Built-in validation rules for statistical analysis requirements
 - **Quality Checks**: Minimum cell count validation, empty row/column detection
