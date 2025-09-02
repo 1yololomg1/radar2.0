@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+openpyxl
+sqlalchemy
+psycopg2-binary
+mysql-connector-python
+scipy
+plotly
+xlrd
