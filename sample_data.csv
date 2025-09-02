@@ -1,0 +1,51 @@
+customer_id,age,income,education_level,purchase_category,satisfaction_score,region,gender
+1,25,45000,Bachelor,Electronics,4.2,North,Male
+2,34,67000,Master,Clothing,3.8,South,Female
+3,28,52000,Bachelor,Electronics,4.5,East,Male
+4,45,89000,PhD,Books,4.1,West,Female
+5,31,58000,Master,Clothing,3.9,North,Male
+6,52,95000,PhD,Electronics,4.7,South,Female
+7,29,49000,Bachelor,Books,3.6,East,Male
+8,38,72000,Master,Electronics,4.3,West,Female
+9,26,41000,High School,Clothing,3.4,North,Male
+10,55,110000,PhD,Books,4.8,South,Female
+11,33,61000,Master,Electronics,4.0,East,Male
+12,42,78000,Bachelor,Clothing,3.7,West,Female
+13,27,47000,Bachelor,Books,3.8,North,Male
+14,49,92000,PhD,Electronics,4.6,South,Female
+15,30,56000,Master,Clothing,4.1,East,Male
+16,36,69000,Bachelor,Books,3.9,West,Female
+17,24,38000,High School,Electronics,3.5,North,Male
+18,51,98000,PhD,Clothing,4.4,South,Female
+19,32,59000,Master,Books,4.0,East,Male
+20,44,81000,Bachelor,Electronics,4.2,West,Female
+21,28,50000,Bachelor,Clothing,3.8,North,Male
+22,37,71000,Master,Books,4.1,South,Female
+23,26,43000,High School,Electronics,3.6,East,Male
+24,48,87000,PhD,Clothing,4.5,West,Female
+25,31,57000,Master,Books,3.9,North,Male
+26,53,102000,PhD,Electronics,4.7,South,Female
+27,29,51000,Bachelor,Clothing,3.7,East,Male
+28,41,76000,Master,Books,4.2,West,Female
+29,25,42000,High School,Electronics,3.4,North,Male
+30,46,85000,PhD,Clothing,4.6,South,Female
+31,33,62000,Master,Books,4.0,East,Male
+32,39,74000,Bachelor,Electronics,4.3,West,Female
+33,27,48000,Bachelor,Clothing,3.8,North,Male
+34,50,94000,PhD,Books,4.5,South,Female
+35,32,60000,Master,Electronics,4.1,East,Male
+36,43,79000,Bachelor,Clothing,3.9,West,Female
+37,26,44000,High School,Books,3.5,North,Male
+38,54,105000,PhD,Electronics,4.8,South,Female
+39,30,55000,Master,Clothing,4.0,East,Male
+40,45,83000,Bachelor,Books,4.4,West,Female
+41,28,49000,Bachelor,Electronics,3.7,North,Male
+42,47,88000,PhD,Clothing,4.5,South,Female
+43,31,58000,Master,Books,3.9,East,Male
+44,35,66000,Bachelor,Electronics,4.2,West,Female
+45,24,40000,High School,Clothing,3.3,North,Male
+46,52,99000,PhD,Books,4.6,South,Female
+47,29,53000,Bachelor,Electronics,3.8,East,Male
+48,40,75000,Master,Clothing,4.1,West,Female
+49,27,46000,Bachelor,Books,3.6,North,Male
+50,48,91000,PhD,Electronics,4.7,South,Female

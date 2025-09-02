@@ -1,0 +1,167 @@
+[
+  {
+    "respondent_id": 1,
+    "response_time_minutes": 12.5,
+    "satisfaction_rating": "Very Satisfied",
+    "product_category": "Software",
+    "usage_frequency": "Daily",
+    "age_group": "25-34",
+    "annual_spending": 2500.75,
+    "recommendation_score": 9,
+    "support_interactions": 2
+  },
+  {
+    "respondent_id": 2,
+    "response_time_minutes": 8.3,
+    "satisfaction_rating": "Satisfied",
+    "product_category": "Hardware",
+    "usage_frequency": "Weekly",
+    "age_group": "35-44",
+    "annual_spending": 1800.25,
+    "recommendation_score": 7,
+    "support_interactions": 1
+  },
+  {
+    "respondent_id": 3,
+    "response_time_minutes": 15.2,
+    "satisfaction_rating": "Neutral",
+    "product_category": "Software",
+    "usage_frequency": "Monthly",
+    "age_group": "45-54",
+    "annual_spending": 950.50,
+    "recommendation_score": 5,
+    "support_interactions": 4
+  },
+  {
+    "respondent_id": 4,
+    "response_time_minutes": 6.7,
+    "satisfaction_rating": "Very Satisfied",
+    "product_category": "Services",
+    "usage_frequency": "Daily",
+    "age_group": "25-34",
+    "annual_spending": 3200.00,
+    "recommendation_score": 10,
+    "support_interactions": 0
+  },
+  {
+    "respondent_id": 5,
+    "response_time_minutes": 11.8,
+    "satisfaction_rating": "Dissatisfied",
+    "product_category": "Hardware",
+    "usage_frequency": "Rarely",
+    "age_group": "55-64",
+    "annual_spending": 450.75,
+    "recommendation_score": 3,
+    "support_interactions": 8
+  },
+  {
+    "respondent_id": 6,
+    "response_time_minutes": 9.4,
+    "satisfaction_rating": "Satisfied",
+    "product_category": "Software",
+    "usage_frequency": "Weekly",
+    "age_group": "35-44",
+    "annual_spending": 1950.25,
+    "recommendation_score": 8,
+    "support_interactions": 2
+  },
+  {
+    "respondent_id": 7,
+    "response_time_minutes": 14.1,
+    "satisfaction_rating": "Very Satisfied",
+    "product_category": "Services",
+    "usage_frequency": "Daily",
+    "age_group": "25-34",
+    "annual_spending": 2800.50,
+    "recommendation_score": 9,
+    "support_interactions": 1
+  },
+  {
+    "respondent_id": 8,
+    "response_time_minutes": 7.9,
+    "satisfaction_rating": "Neutral",
+    "product_category": "Hardware",
+    "usage_frequency": "Monthly",
+    "age_group": "45-54",
+    "annual_spending": 1200.00,
+    "recommendation_score": 6,
+    "support_interactions": 3
+  },
+  {
+    "respondent_id": 9,
+    "response_time_minutes": 13.6,
+    "satisfaction_rating": "Satisfied",
+    "product_category": "Software",
+    "usage_frequency": "Weekly",
+    "age_group": "35-44",
+    "annual_spending": 2100.75,
+    "recommendation_score": 7,
+    "support_interactions": 2
+  },
+  {
+    "respondent_id": 10,
+    "response_time_minutes": 10.2,
+    "satisfaction_rating": "Very Dissatisfied",
+    "product_category": "Services",
+    "usage_frequency": "Rarely",
+    "age_group": "55-64",
+    "annual_spending": 300.25,
+    "recommendation_score": 2,
+    "support_interactions": 12
+  },
+  {
+    "respondent_id": 11,
+    "response_time_minutes": 5.8,
+    "satisfaction_rating": "Very Satisfied",
+    "product_category": "Hardware",
+    "usage_frequency": "Daily",
+    "age_group": "25-34",
+    "annual_spending": 3500.00,
+    "recommendation_score": 10,
+    "support_interactions": 0
+  },
+  {
+    "respondent_id": 12,
+    "response_time_minutes": 16.3,
+    "satisfaction_rating": "Dissatisfied",
+    "product_category": "Software",
+    "usage_frequency": "Monthly",
+    "age_group": "45-54",
+    "annual_spending": 750.50,
+    "recommendation_score": 4,
+    "support_interactions": 6
+  },
+  {
+    "respondent_id": 13,
+    "response_time_minutes": 8.7,
+    "satisfaction_rating": "Satisfied",
+    "product_category": "Services",
+    "usage_frequency": "Weekly",
+    "age_group": "35-44",
+    "annual_spending": 2250.25,
+    "recommendation_score": 8,
+    "support_interactions": 1
+  },
+  {
+    "respondent_id": 14,
+    "response_time_minutes": 12.1,
+    "satisfaction_rating": "Neutral",
+    "product_category": "Hardware",
+    "usage_frequency": "Monthly",
+    "age_group": "45-54",
+    "annual_spending": 1100.75,
+    "recommendation_score": 5,
+    "support_interactions": 4
+  },
+  {
+    "respondent_id": 15,
+    "response_time_minutes": 7.4,
+    "satisfaction_rating": "Very Satisfied",
+    "product_category": "Software",
+    "usage_frequency": "Daily",
+    "age_group": "25-34",
+    "annual_spending": 2900.00,
+    "recommendation_score": 9,
+    "support_interactions": 1
+  }
+]
