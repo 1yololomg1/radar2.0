@@ -1,0 +1,31 @@
+Age_Group,Gender,Education_Level,Satisfaction_Level,Income_Category,Region
+18-25,Male,High School,Very Satisfied,Low,North
+26-35,Female,Bachelor,Somewhat Satisfied,Medium,South
+36-45,Male,Master,Very Satisfied,High,East
+46-55,Female,High School,Neutral,Medium,West
+56-65,Male,Bachelor,Somewhat Dissatisfied,High,North
+18-25,Female,Master,Very Satisfied,Medium,South
+26-35,Male,High School,Neutral,Low,East
+36-45,Female,Bachelor,Somewhat Satisfied,High,West
+46-55,Male,Master,Very Satisfied,Medium,North
+56-65,Female,High School,Somewhat Dissatisfied,Low,South
+18-25,Male,Bachelor,Neutral,Medium,East
+26-35,Female,Master,Very Satisfied,High,West
+36-45,Male,High School,Somewhat Satisfied,Medium,North
+46-55,Female,Bachelor,Neutral,High,South
+56-65,Male,Master,Somewhat Dissatisfied,Low,East
+18-25,Female,High School,Very Satisfied,Medium,West
+26-35,Male,Bachelor,Somewhat Satisfied,High,North
+36-45,Female,Master,Neutral,Medium,South
+46-55,Male,High School,Very Satisfied,Low,East
+56-65,Female,Bachelor,Somewhat Dissatisfied,High,West
+18-25,Male,Master,Neutral,Medium,North
+26-35,Female,High School,Somewhat Satisfied,Low,South
+36-45,Male,Bachelor,Very Satisfied,High,East
+46-55,Female,Master,Neutral,Medium,West
+56-65,Male,High School,Somewhat Dissatisfied,Low,North
+18-25,Female,Bachelor,Very Satisfied,Medium,South
+26-35,Male,Master,Somewhat Satisfied,High,East
+36-45,Female,High School,Neutral,Low,West
+46-55,Male,Bachelor,Very Satisfied,Medium,North
+56-65,Female,Master,Somewhat Dissatisfied,High,South
